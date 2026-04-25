@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Vansh Saxena - Web Developer specializing in responsive, user-focused web experiences."
+    />
+    <meta
+      name="keywords"
+      content="web developer portfolio, frontend developer, ui ux, javascript developer"
+    />
+    <meta name="author" content="Vansh Saxena" />
+    <title>Vansh Saxena | Web Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind = {
+        config: {
+          darkMode: "class",
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ["Inter", "sans-serif"],
+              },
+              colors: {
+                brand: {
+                  50: "#eff7ff",
+                  100: "#dbeeff",
+                  200: "#bfdfff",
+                  300: "#92cbff",
+                  400: "#5bafff",
+                  500: "#2f8fff",
+                  600: "#1a73f8",
+                  700: "#155de0",
+                  800: "#194db5",
+                  900: "#1b438f",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body
+    class="bg-zinc-50 text-zinc-900 antialiased transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100"
+  >
+    <div id="preloader" class="preloader">
+      <div class="preloader__spinner"></div>
+      <p class="preloader__text">Crafting experience...</p>
+    </div>
+
+    <div class="pointer-follower" aria-hidden="true"></div>
+
+    <div class="background-layer" aria-hidden="true">
+      <span class="orb orb--one"></span>
+      <span class="orb orb--two"></span>
+      <span class="orb orb--three"></span>
+    </div>
+
+    <header
+      class="fixed inset-x-0 top-3 z-50 mx-auto w-[min(95%,72rem)] rounded-2xl border border-white/25 bg-white/45 px-4 py-3 shadow-xl shadow-zinc-900/5 backdrop-blur-xl transition-colors duration-300 dark:border-zinc-700/60 dark:bg-zinc-900/55 sm:px-6"
+    >
+      <div class="flex items-center justify-between gap-3">
+        <a href="#home" class="text-lg font-extrabold tracking-tight">VANSH<span class="text-brand-500">.</span></a>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About Me</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#work">Work With Me</a>
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="theme-toggle"
+            type="button"
+            class="theme-toggle"
+            aria-label="Toggle dark and light theme"
+          >
+            <span class="theme-toggle__thumb"></span>
+          </button>
+
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-300/70 bg-white/80 text-zinc-700 transition hover:text-brand-600 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-200 md:hidden"
+            aria-label="Open mobile menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-menu" class="mt-3 hidden flex-col gap-1 border-t border-zinc-200/70 pt-3 dark:border-zinc-700/70 md:hidden">
+        <a class="nav-link mobile-link active" href="#home">Home</a>
+        <a class="nav-link mobile-link" href="#about">About Me</a>
+        <a class="nav-link mobile-link" href="#skills">Skills</a>
+        <a class="nav-link mobile-link" href="#projects">Projects</a>
+        <a class="nav-link mobile-link" href="#work">Work With Me</a>
+        <a class="nav-link mobile-link" href="#contact">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="relative z-10">
+      <section id="home" class="section min-h-screen pt-30">
+        <div class="mx-auto grid w-[min(92%,72rem)] items-center gap-8 md:gap-12 lg:gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="pr-0 md:pr-4 lg:pr-6">
+            <p class="chip reveal">Web Developer Portfolio</p>
+            <h1 class="hero-title reveal mt-5 sm:mt-6 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+              Hi, I'm Vansh Saxena.<br />
+              <!-- <span class="bg-gradient-to-r from-brand-500 to-cyan-400 bg-clip-text text-transparent">I craft digital products people love.</span> -->
+            </h1>
+            <p class="reveal mt-5 sm:mt-6 max-w-xl text-base text-zinc-600 dark:text-zinc-300 sm:text-lg leading-relaxed">
+              Creative frontend engineer turning ideas into premium web experiences with clean code, high performance, and thoughtful UX.
+            </p>
+            <p class="reveal mt-5 text-lg font-semibold text-brand-600 dark:text-brand-400">
+              <span id="typing-text" aria-live="polite"></span>
+            </p>
+
+            <div class="reveal mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
+              <a href="#projects" class="btn-primary">View Projects</a>
+              <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="reveal mt-8 md:mt-0 pl-0 md:pl-4 lg:pl-6 flex items-center justify-center">
+            <img 
+              src="./assets/img/download.png" 
+              alt="Portfolio showcase animation" 
+              class="w-full max-w-sm md:max-w-md lg:max-w-lg object-contain -scale-x-100"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="mx-auto w-[min(92%,72rem)]">
+          <div class="section-header reveal">
+            <p class="chip">About Me</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Building meaningful web experiences</h2>
+          </div>
+
+          <div class="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <article class="glass-card reveal p-6 sm:p-8">
+              <div class="profile-wrap mx-auto w-[min(100%,22rem)]">
+                <img
+                  class="profile-image"
+                  src="./assets/img/photo.jpeg"
+                  alt="Vansh Saxena profile"
+                />
+              </div>
+              <p class="mt-6 text-zinc-600 dark:text-zinc-300">
+                I am a dedicated Web Developer who creates responsive and user-friendly websites. I enjoy turning ideas into real digital experiences that are both functional and visually appealing. I focus on clean design and smooth user interaction. I am always learning and improving my skills to stay updated. I am looking for opportunities to grow and contribute to meaningful projects.
+            </article>
+
+            <article class="grid gap-4">
+              <div class="timeline-item reveal">
+                <h3 class="text-lg font-semibold">Senior Frontend Developer - PixelWave Studio</h3>
+                <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">2023 - Present</p>
+                <p class="mt-3 text-zinc-600 dark:text-zinc-300">Leading UI architecture and design system adoption across SaaS products.</p>
+              </div>
+              <div class="timeline-item reveal">
+                <h3 class="text-lg font-semibold">Frontend Developer - Nova Labs</h3>
+                <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">2021 - 2023</p>
+                <p class="mt-3 text-zinc-600 dark:text-zinc-300">Built and optimized responsive products with modern JavaScript frameworks.</p>
+              </div>
+              <div class="timeline-item reveal">
+                <h3 class="text-lg font-semibold">UI/UX Intern - CreativeOrbit</h3>
+                <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">2020 - 2021</p>
+                <p class="mt-3 text-zinc-600 dark:text-zinc-300">Translated design concepts into interactive prototypes and production-ready interfaces.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="mx-auto w-[min(92%,72rem)]">
+          <div class="section-header reveal">
+            <p class="chip">Skills</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Technologies I work with daily</h2>
+          </div>
+
+          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+            <article class="glass-card reveal p-6">
+              <h3 class="text-xl font-semibold">Frontend</h3>
+              <div class="mt-5 grid gap-4">
+                <div class="skill-row" data-progress="95"><span>HTML5 / CSS3</span><span>95%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="92"><span>JavaScript (ES6+)</span><span>92%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="90"><span>Tailwind / UI Systems</span><span>90%</span></div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+
+            <article class="glass-card reveal p-6">
+              <h3 class="text-xl font-semibold">Backend</h3>
+              <div class="mt-5 grid gap-4">
+                <div class="skill-row" data-progress="82"><span>Node.js</span><span>82%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="80"><span>Express</span><span>80%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="78"><span>MongoDB / SQL</span><span>78%</span></div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+
+            <article class="glass-card reveal p-6">
+              <h3 class="text-xl font-semibold">Tools</h3>
+              <div class="mt-5 grid gap-4">
+                <div class="skill-row" data-progress="90"><span>Git & GitHub</span><span>90%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="85"><span>Figma</span><span>85%</span></div>
+                <div class="skill-bar"><span></span></div>
+                <div class="skill-row" data-progress="88"><span>GSAP</span><span>88%</span></div>
+                <div class="skill-bar"><span></span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="mx-auto w-[min(92%,72rem)]">
+          <div class="section-header reveal">
+            <p class="chip">Projects</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Selected work</h2>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="project-card reveal">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Analytics dashboard project" />
+              <div class="project-content">
+                <h3>Insight Dashboard</h3>
+                <p>A modern analytics dashboard with real-time KPIs and customizable widgets.</p>
+                <p class="tech-stack">Tech: HTML, Tailwind, JavaScript, Chart.js</p>
+                <div class="project-links">
+                  <a href="#" aria-label="Live demo of Insight Dashboard">Live Demo</a>
+                  <a href="#" aria-label="GitHub source for Insight Dashboard">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Agency website project" />
+              <div class="project-content">
+                <h3>Creative Agency Site</h3>
+                <p>High-conversion multi-section site with fluid interactions and polished visual storytelling.</p>
+                <p class="tech-stack">Tech: HTML, Tailwind, GSAP</p>
+                <div class="project-links">
+                  <a href="#" aria-label="Live demo of Creative Agency Site">Live Demo</a>
+                  <a href="#" aria-label="GitHub source for Creative Agency Site">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Task management app project" />
+              <div class="project-content">
+                <h3>TaskFlow App</h3>
+                <p>A productivity web app with drag-and-drop workflows and focused task planning.</p>
+                <p class="tech-stack">Tech: JavaScript, LocalStorage API, Tailwind</p>
+                <div class="project-links">
+                  <a href="#" aria-label="Live demo of TaskFlow App">Live Demo</a>
+                  <a href="#" aria-label="GitHub source for TaskFlow App">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="mx-auto w-[min(92%,72rem)]">
+          <div class="section-header reveal">
+            <p class="chip">Work With Me</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Services designed to grow your product</h2>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="service-card reveal">
+              <h3>Web Development</h3>
+              <p>Responsive, scalable, and maintainable websites built for speed and conversion.</p>
+              <p class="price">Starting at $800</p>
+            </article>
+            <article class="service-card reveal">
+              <h3>UI/UX Design</h3>
+              <p>User-first interfaces with clear flows, modern visuals, and high usability standards.</p>
+              <p class="price">Starting at $600</p>
+            </article>
+            <article class="service-card reveal">
+              <h3>Performance Optimization</h3>
+              <p>Audit and optimize loading, rendering, and interaction performance across devices.</p>
+              <p class="price">Starting at $400</p>
+            </article>
+          </div>
+
+          <div class="reveal mt-10">
+            <a href="#contact" class="btn-primary">Let's Build Something Great</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section pb-24">
+        <div class="mx-auto w-[min(92%,72rem)]">
+          <div class="section-header reveal">
+            <p class="chip">Contact Us</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Tell me about your idea</h2>
+          </div>
+
+          <div class="mt-10 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+            <form id="contact-form" class="glass-card reveal p-6 sm:p-8" novalidate>
+              <div class="grid gap-4">
+                <label class="form-label">
+                  Name
+                  <input class="form-input" type="text" name="name" placeholder="Your name" required />
+                </label>
+                <label class="form-label">
+                  Email
+                  <input class="form-input" type="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label class="form-label">
+                  Message
+                  <textarea class="form-input min-h-32" name="message" placeholder="Tell me about your project..." required></textarea>
+                </label>
+              </div>
+              <p id="form-message" class="mt-4 text-sm"></p>
+              <button type="submit" class="btn-primary mt-6">Send Message</button>
+            </form>
+
+            <aside class="grid gap-4">
+              <div class="contact-card reveal">
+                <h3 class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  Email
+                </h3>
+                <a href="mailto:vansh@gmail.com">vansh@gmail.com</a>
+              </div>
+              <div class="contact-card reveal">
+                <h3 class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Social
+                </h3>
+                <div class="flex gap-4">
+                  <a href="#" aria-label="LinkedIn profile" class="social-icon">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="GitHub profile" class="social-icon">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Twitter profile" class="social-icon">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.5.25 12-4.5z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="contact-card reveal">
+                <h3 class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2"/>
+                  </svg>
+                  Location
+                </h3>
+                <p>New Delhi, India</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button id="scroll-top-btn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 14 6-6 6 6" />
+      </svg>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
